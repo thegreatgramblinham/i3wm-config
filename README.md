@@ -67,14 +67,19 @@ Once you're back at the command line, fire things up with:
 startx
 ```
 
-Resolution Config
+i3wm Config
 =================
-Depending on your monitor, you may wish to sway away from the current resolution. To do this, we will use:
+//TBD
+
+Display Config
+=================
+Depending on your monitor, you may wish to sway away from the current resolution. To do this, enter:
 ```
 xrandr
 ```
 
-This tool was installed from the x11-xserver-utils package an allows us to modify our display in various ways. To change resolution use the command:
+This tool was installed from the x11-xserver-utils package an allows us to modify our display in various ways. 
+To change resolution use the command:
 ```
 xrandr --output <display_id> --mode <desired_resolution>
 ```
@@ -82,3 +87,12 @@ i.e.
 ```
 xrandr --output HDMI-1 --mode 1920x1080
 ```
+
+Enable a secondary monitor, provide ID and a position like so:
+```
+xrandr --output HDMI-2 --right-of HDMI-1
+```
+
+Desktop Background Configuration
+=================
+//TODO
