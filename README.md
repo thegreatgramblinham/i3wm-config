@@ -2,41 +2,62 @@ Overview
 =================
 This file contains the (roughly) serialized steps to setting up i3wm on a generic, barebones Debian instance.
 
+Basic i3wm Shortcut Reference
+=================
+```
+Open terminal                  => mod+enter
+Move tile focus                => mod+arrow
+Close current tile             => mod+shift+q
+Application run menu           => mod+d
+Next tile split vertical       => mod+v
+Enter resize mode              => mod+r
+
+Shift current tile location    => mod+shift+arrow
+Move to workspace              => mod+number
+Move curr tile to workspace    => mod+shift+number
+
+Switch to stack view           => mod+s
+Switch to tile view            => mod+e
+Switch to tab view             => mod+w
+
+Exit i3wm                      => mod+shift+e
+```
+
 Installing i3wm
 =================
-To begin, make sure all current apt packages are up to date and we are referencing most recent versions.
+To begin, make sure all current apt packages are up to date and we are referencing most recent versions:
 ```
 sudo apt update
 sudo apt upgrade
 ```
 
-Remove any obsolete packages.
+Remove any obsolete packages:
 ```
 sudo apt dist-upgrade
 ```
 
-Then restart.
+Then restart:
 ```
 sudo reboot
 ```
 
-Now we need to be able to launch an xserver instance to display a desktop.
+Now we need to be able to launch an xserver instance to display a desktop:
 ```
 sudo apt install xserver-xorg
 sudo apt install xinit
 ```
 
-Go ahead and grab the utilities package too if it's not already installed. We'll need this later for display configuration.
+Go ahead and grab the utilities package too if it's not already installed. We'll need this later for display configuration:
 ```
 sudo apt x11-xserver-utils
 ```
 
-Now we can install i3wm itself.
+Now we can install i3wm itself:
 ```
 sudo apt install i3
 ```
 
-Hit things with a restart just in case.
+Hit things with a restart just in case:
 ```
 sudo reboot
 ```
