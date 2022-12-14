@@ -1,6 +1,6 @@
 Overview
 =================
-This file contains the (roughly) serialized steps to setting up i3wm on a generic, barebones Debian instance.
+This file contains the (roughly) serialized steps to setting up i3wm on a generic, barebones Debian-based Linux instance.
 
 Basic i3wm Shortcut Reference
 =================
@@ -12,9 +12,9 @@ Application run menu           => mod+d
 Next tile split vertical       => mod+v
 Enter resize mode              => mod+r
 
-Shift current tile location    => mod+shift+arrow
-Move to workspace              => mod+number
-Move curr tile to workspace    => mod+shift+number
+Shift curr tile location       => mod+shift+arrow
+Move to workspace#             => mod+number
+Move curr tile to workspace#   => mod+shift+number
 
 Switch to stack view           => mod+s
 Switch to tile view            => mod+e
