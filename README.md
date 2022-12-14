@@ -1,6 +1,6 @@
 Overview
 =================
-This file contains the (roughly) serialized steps to setting up i3wm on a generic, barebones Debian-based Linux instance.
+This file contains the (roughly) serialized steps to setting up [i3wm](https://i3wm.org) on a generic, barebones Debian-based Linux instance. For more advanced configuration, refer to the [i3wm User's Guide](https://i3wm.org/docs/userguide.html).
 
 Basic i3wm Shortcut Reference
 =================
