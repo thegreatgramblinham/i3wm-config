@@ -93,6 +93,12 @@ Commands that need to be run *each* time i3wm is restarted (meaing mid-session) 
 exec_always <command>
 ```
 
+Variables can be allocated with the following syntax:
+```
+set $variableName "<text_value>"
+```
+This will set <text_value> anywhere below where "$variableName" is defined.
+
 Keyboard Config
 ===
 Keyboard layout is stored in the file:
@@ -101,22 +107,31 @@ Keyboard layout is stored in the file:
 ```
 Mouse Config
 ===
-To change things like mouse pointer acceleration (:vomiting_face:) and mouse speed, we first need to call xinput:
+To change things like mouse pointer acceleration (:vomiting_face:), we first need to call xinput:
 ```
 xinput --list
 ```
 From there we can get the "device id" or name of our pointing device we want to modify.
 
-We can disable accleration with either:
+At the time of writing, mouse acceleration is controled by an xorg .conf file located:
 ```
-xinput --set-prop <device_id> 'libinput Accel Speed' -1
-xinput --set-prop '<device_name>' 'libinput Accel Speed' -1
+/etc/X11/xorg.conf.d/50-mouse-acceleration.conf
 ```
-(Note that this value has to be within the range of [-1:1])
+The current version of that file will be maintained in this repo.
+
+Additional configuration options can be found in the documentation, [found here.](https://xorg.freedesktop.org/wiki/Development/Documentation/PointerAcceleration/#Introduction)
+[ArchLinuxWiki - MouseAcceleration](https://wiki.archlinux.org/title/Mouse_acceleration)
 
 Time/Date Config
 ===
-//TODO
+To set your current timezone, we'll use:
+```
+timedatectl list-timezones
+```
+Once you've found yours, simply use the set command. For example:
+```
+timedatectl set-timezone America/New_York
+```
 
 Display Config
 ===
