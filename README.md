@@ -20,6 +20,7 @@ Switch to stack view           => mod+s
 Switch to tile view            => mod+e
 Switch to tab view             => mod+w
 
+Reload i3wm                    => mod+shift+r
 Exit i3wm                      => mod+shift+e
 ```
 
@@ -81,6 +82,16 @@ to be able to see hidden files.
 
 This file controls most of the behavior of i3wm, including keybindings and start up commands (exec). There is a copy of this file in the repository so it should not have to be created after each fresh install. 
 
+One time startup command line functions can be added with the prefix:
+```
+exec <command>
+```
+
+Commands that need to be run *each* time i3wm is restarted (meaing mid-session) must be prefixed with:
+```
+exec_always <command>
+```
+
 Keyboard Config
 ===
 Keyboard layout is stored in the file:
@@ -88,6 +99,10 @@ Keyboard layout is stored in the file:
 /etc/default/keyboard
 ```
 Mouse Config
+===
+//TODO
+
+Time/Date Config
 ===
 //TODO
 
@@ -108,9 +123,15 @@ i.e.
 xrandr --output HDMI-1 --mode 1920x1080
 ```
 
-Enable a secondary monitor, provide ID and a position like so:
+
+To enable a secondary monitor, provide ID and a position like so:
 ```
 xrandr --output HDMI-2 --right-of HDMI-1
+```
+
+i3wm only seems to like *ONE* call to xrandr in the config file, but multiple command can be passed together. For example:
+```
+exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 ```
 
 Desktop Background Config
