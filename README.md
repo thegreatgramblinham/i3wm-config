@@ -69,7 +69,11 @@ startx
 
 i3wm Config
 =================
-//TBD
+The heart of i3wm config lives in the home directory (represented as "~/") under
+```
+~/.config/i3/config
+```
+This file controls most of the behavior of i3wm, including keybindings and start up commands (exec). There is a copy of this file in the repository so it should not have to be created after each fresh install. 
 
 Display Config
 =================
@@ -93,6 +97,15 @@ Enable a secondary monitor, provide ID and a position like so:
 xrandr --output HDMI-2 --right-of HDMI-1
 ```
 
-Desktop Background Configuration
+Desktop Background Config
 =================
 //TODO
+
+Keyboard Config
+=================
+Keyboard layout is stored in the file:
+```
+/etc/default/keyboard
+```
+
+
