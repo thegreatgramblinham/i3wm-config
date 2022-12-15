@@ -48,9 +48,10 @@ sudo apt install xserver-xorg
 sudo apt install xinit
 ```
 
-Go ahead and grab the utilities package too if it's not already installed. We'll need this later for display configuration:
+Go ahead and grab some utilities packages too if it's not already installed. We'll need this later for configuration:
 ```
-sudo apt x11-xserver-utils
+sudo apt install x11-xserver-utils
+sudo apt install xinput
 ```
 
 Now we can install i3wm itself:
@@ -80,7 +81,7 @@ ls -al
 ```
 to be able to see hidden files.
 
-This file controls most of the behavior of i3wm, including keybindings and start up commands (exec). There is a copy of this file in the repository so it should not have to be created after each fresh install. 
+This file controls most of the behavior of i3wm, including keybindings and start up commands (exec). There is a copy of this file in the repository so it should not have to be created after each fresh install.
 
 One time startup command line functions can be added with the prefix:
 ```
@@ -100,7 +101,18 @@ Keyboard layout is stored in the file:
 ```
 Mouse Config
 ===
-//TODO
+To change things like mouse pointer acceleration (:vomiting_face:) and mouse speed, we first need to call xinput:
+```
+xinput --list
+```
+From there we can get the "device id" or name of our pointing device we want to modify.
+
+We can disable accleration with either:
+```
+xinput --set-prop <device_id> 'libinput Accel Speed' -1
+xinput --set-prop '<device_name>' 'libinput Accel Speed' -1
+```
+(Note that this value has to be within the range of [-1:1])
 
 Time/Date Config
 ===
@@ -113,7 +125,7 @@ Depending on your monitor, you may wish to sway away from the current resolution
 xrandr
 ```
 
-This tool was installed from the x11-xserver-utils package an allows us to modify our display in various ways. 
+This tool was installed from the x11-xserver-utils package an allows us to modify our display in various ways.
 To change resolution use the command:
 ```
 xrandr --output <display_id> --mode <desired_resolution>
