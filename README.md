@@ -120,7 +120,8 @@ At the time of writing, mouse acceleration is controled by an xorg .conf file lo
 The current version of that file will be maintained in this repo.
 
 Additional configuration options can be found in the documentation, [found here.](https://xorg.freedesktop.org/wiki/Development/Documentation/PointerAcceleration/#Introduction)
-[ArchLinuxWiki - MouseAcceleration](https://wiki.archlinux.org/title/Mouse_acceleration)
+
+[And here @ ArchLinuxWiki - MouseAcceleration](https://wiki.archlinux.org/title/Mouse_acceleration)
 
 Time/Date Config
 ===
@@ -160,6 +161,8 @@ i3wm only seems to like *ONE* call to xrandr in the config file, but multiple co
 ```
 exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 ```
+
+
 
 Desktop Background Config
 ===
