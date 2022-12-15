@@ -1,9 +1,9 @@
 Overview
-=================
+===
 This file contains the (roughly) serialized steps to setting up [i3wm](https://i3wm.org) on a generic, barebones Debian-based Linux instance. For more advanced configuration, refer to the [i3wm User's Guide](https://i3wm.org/docs/userguide.html).
 
 Basic i3wm Shortcut Reference
-=================
+===
 ```
 Open terminal                  => mod+enter
 Move tile focus                => mod+arrow
@@ -24,7 +24,7 @@ Exit i3wm                      => mod+shift+e
 ```
 
 Installing i3wm
-=================
+===
 To begin, make sure all current apt packages are up to date and we are referencing most recent versions:
 ```
 sudo apt update
@@ -68,15 +68,31 @@ startx
 ```
 
 i3wm Config
-=================
+===
 The heart of i3wm config lives in the home directory (represented as "~/") under
 ```
 ~/.config/i3/config
 ```
+be sure to use the command
+```
+ls -al
+```
+to be able to see hidden files.
+
 This file controls most of the behavior of i3wm, including keybindings and start up commands (exec). There is a copy of this file in the repository so it should not have to be created after each fresh install. 
 
+Keyboard Config
+===
+Keyboard layout is stored in the file:
+```
+/etc/default/keyboard
+```
+Mouse Config
+===
+//TODO
+
 Display Config
-=================
+===
 Depending on your monitor, you may wish to sway away from the current resolution. To do this, enter:
 ```
 xrandr
@@ -98,14 +114,8 @@ xrandr --output HDMI-2 --right-of HDMI-1
 ```
 
 Desktop Background Config
-=================
+===
 //TODO
 
-Keyboard Config
-=================
-Keyboard layout is stored in the file:
-```
-/etc/default/keyboard
-```
 
 
