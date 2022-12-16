@@ -162,7 +162,13 @@ i3wm only seems to like *ONE* call to xrandr in the config file, but multiple co
 exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 ```
 
-
+Font Config
+===
+Any .ttf file can be placed into the home directory under:
+```
+~/.fonts
+```
+From there, it should be available as an installed font.
 
 Desktop Background Config
 ===
