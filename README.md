@@ -2,6 +2,8 @@ Overview
 ===
 This file contains the (roughly) serialized steps to setting up [i3wm](https://i3wm.org) on a generic, barebones Debian-based Linux instance. For more advanced configuration, refer to the [i3wm User's Guide](https://i3wm.org/docs/userguide.html).
 
+These instructions are intended for, and have been tested on, Raspberry Pi OS - Lite (64bit).
+
 Basic i3wm Shortcut Reference
 ===
 ```
@@ -68,6 +70,10 @@ Once you're back at the command line, fire things up with:
 ```
 startx
 ```
+
+First boot
+===
+Upon first boot of i3wm, you'll be asked if you want to generate a config file. Accept this. Then you'll be asked to specific the modifier key. I highly recommend the binding the mod key to the OS key.
 
 i3wm Config
 ===
@@ -157,7 +163,7 @@ To enable a secondary monitor, provide ID and a position like so:
 xrandr --output HDMI-2 --right-of HDMI-1
 ```
 
-i3wm only seems to like *ONE* call to xrandr in the config file, but multiple command can be passed together. For example:
+This call can be inserted into i3wm just like any other. i3wm only seems to like *ONE* call to xrandr in the config file, but multiple command can be passed together. For example:
 ```
 exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 ```
@@ -172,7 +178,11 @@ From there, it should be available as an installed font.
 
 Desktop Background Config
 ===
-//TODO
+An addtional program is needed to manage our background image. Here we'll be using feh.
+```
+sudo apt install feh
+```
+This call can be inserted into i3wm just like any other to ensure it starts with each boot.
 
 
 

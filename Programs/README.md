@@ -2,9 +2,11 @@ Overview
 ===
 This section will cover basic setup of prefered programs.
 
+These instructions are intended for, and have been tested on, Raspberry Pi OS - Lite (64bit).
+
 Git
 ===
-The ubiquitous SCM can be installed via Debian package:
+[Git](https://git-scm.com/), the ubiquitous SCM, can be installed via Debian package:
 ```
 sudo apt install git
 ```
@@ -12,7 +14,7 @@ sudo apt install git
 
 VSCode
 ===
-VSCode can be installed via Debian package:
+[VSCode](https://code.visualstudio.com/) can be installed via Debian package:
 ```
 sudo apt install code
 ```
@@ -20,7 +22,7 @@ From there, [check out this repository](https://github.com/thegreatgramblinham/v
 
 GNOME Terminal
 ===
-Gnome Terminal can be installed via Debian package:
+[Gnome Terminal](https://help.gnome.org/users/gnome-terminal/stable/) can be installed via Debian package:
 ```
 sudo apt install gnome-terminal
 ```
@@ -29,4 +31,39 @@ In order to configure the default terminal in your Debian distribuition, run:
 sudo update-alternatives --config x-terminal-emulator
 ```
 and select your desired terminal from the list.
+
+OpenSCAD
+===
+[OpenSCAD](https://openscad.org/) can be installed via Debian package:
+```
+sudo apt install openscad
+```
+
+Midnight Commander
+===
+[Midnight Commander](https://midnight-commander.org/) can be installed via Debian package:
+```
+sudo apt install mc
+```
+
+GParted
+===
+[GParted](https://gparted.org/) can be installed via Debian package:
+```
+sudo apt install gparted
+```
+
+Slic3r
+===
+[Slic3r](https://slic3r.org/) can be installed via Debian package:
+```
+sudo apt install slic3r
+```
+
+Raspberry Pi Imager
+===
+[Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager) can be installed via Debian package:
+```
+sudo apt install rpi-imager
+```
 
