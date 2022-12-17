@@ -193,5 +193,13 @@ exec_always feh --bg-scale Pictures/deepSpace.webp
 
 ##ADDED# Window Borders
 hide_edge_borders horizontal
-default_border pixel 2
-default_floating_border pixel 1
+
+##ADDED# Window Color Theme
+# class                 border  bground text    indicator child_border
+client.focused          #B865AA #946287 #FFFFFF #B865AA   #B865AA
+client.focused_inactive #A96F9A #784F6D #A3A3A3 #5E442F   #784F6D
+client.unfocused        #5E442F #4F4237 #888888 #5E442F   #5E442F
+client.urgent           #815533 #E20871 #000000 #815533   #E20871
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background               #0C0C0C
