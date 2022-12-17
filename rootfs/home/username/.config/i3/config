@@ -189,3 +189,9 @@ exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --
 
 
 ##ADDED# Wallpaper Initialization
+exec_always feh --bg-scale Pictures/deepSpace.webp
+
+##ADDED# Window Borders
+hide_edge_borders horizontal
+default_border pixel 2
+default_floating_border pixel 1
