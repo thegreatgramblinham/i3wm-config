@@ -48,12 +48,21 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+##ADDED# dmenu Color Theme
+set $dmBgClr "#F7D0FD"
+set $dmTxtClr "#2b2a25"
+set $dmActBgClr "#42382D"
+set $dmActTxtClr "#FFFBF7"
+##Important: Variables are not used here because they don't seem to translate as expected
+##           and create errors. I've left them in above for clarity on what each one does.
+bindsym $mod+d exec "dmenu_run -nf '#2b2a25' -nb '#F7D0FD' -sb '#42382D' -sf '#FFFBF7' -fn 'JetBrainsMonoNL-Bold-16' -p 'Run >>'"
 
 # change focus
 bindsym $mod+j focus left
@@ -108,16 +117,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:LeftMonitor"
+set $ws2 "2:RightMonitor"
+set $ws3 "3:Workspace3"
+set $ws4 "4:Workspace4"
+set $ws5 "5:Workspace5"
+set $ws6 "6:Workspace6"
+set $ws7 "7:Workspace7"
+set $ws8 "8:Workspace8"
+set $ws9 "9:Workspace9"
+set $ws10 "10:Workspace10"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -177,9 +186,66 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+##ADDED# Window Color Theme
+set $focBgClr "#946287"
+set $focBorClr "#B865AA"
+set $focTxtClr "#FFFBF7"
+
+set $unfocBgClr "#332D2A"
+set $unfocBorClr "#332D2A"
+set $unfocTxtClr "#888888"
+
+set $alrtBgClr "#E20871"
+set $alrtBorClr "#FF00FF"
+set $alrtTxtClr "#000000"
+
+set $hldrBgClr "#0C0C0C"
+set $hldrBorClr "#000000"
+set $hldrTxtClr "#FFFBF7"
+
+# class                 border       bground     text         indicator    child_border
+client.focused          $focBorClr   $focBgClr   $focTxtClr   $focBorClr   $focBorClr
+client.focused_inactive $unfocBorClr $unfocBgClr $unfocTxtClr $unfocBorClr $unfocBorClr
+client.unfocused        $unfocBorClr $unfocBgClr $unfocTxtClr $unfocBorClr $unfocBorClr
+client.urgent           $alrtBorClr  $alrtBgClr  $alrtTxtClr  $alrtBorClr  $alrtBgClr
+client.placeholder      $hldrBorClr  $hldrBgClr  $hldrTxtClr  $hldrBorClr  $hldrBorClr
+
+client.background                    $hldrBgClr
+
+##ADDED# Bar Color Theme
+set $focWsBgClr "#946287"
+set $focWsBorClr "#B865AA"
+set $focWsTxtClr "#FFFBF7"
+
+set $actWsBgClr "#332D2A"
+set $actWsBorClr "#887870"
+set $actWsTxtClr "#FFFBF7"
+
+set $inactWsBgClr "#332D2A"
+set $inactWsBorClr "#332D2A"
+set $inactWsTxtClr "#888888"
+
+set $barBgClr "#332D2A"
+set $barTxtClr "#FFFBF7"
+set $barSepClr "#747474"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
+bar
+{
+        colors
+        {
+                #bar
+                background $barBgClr
+                statusline $barTxtClr
+                separator  $barSepClr
+
+                #worspaces         border         bground       text
+                focused_workspace  $focWsBorClr   $focWsBgClr   $focWsTxtClr
+                active_workspace   $actWsBorClr   $actWsBgClr   $actWsTxtClr
+                inactive_workspace $inactWsBorClr $inactWsBgClr $inactWsTxtClr
+                urgent_workspace   #2F343A        #900000       #FFFFFF
+                binding_mode       #2F343A        #900000       #FFFFFF
+        }
         status_command i3status
 }
 
@@ -187,19 +253,8 @@ bar {
 ##ADDED# Display Initialization
 exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 
-
 ##ADDED# Wallpaper Initialization
 exec_always feh --bg-scale Pictures/deepSpace.webp
 
 ##ADDED# Window Borders
-hide_edge_borders horizontal
-
-##ADDED# Window Color Theme
-# class                 border  bground text    indicator child_border
-client.focused          #B865AA #946287 #FFFFFF #B865AA   #B865AA
-client.focused_inactive #A96F9A #784F6D #A3A3A3 #5E442F   #784F6D
-client.unfocused        #5E442F #4F4237 #888888 #5E442F   #5E442F
-client.urgent           #815533 #E20871 #000000 #815533   #E20871
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-
-client.background               #0C0C0C
+hide_edge_borders none
