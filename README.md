@@ -196,5 +196,16 @@ All window and bar color selection is done through the main i3wm config file. Th
 - [Online i3 Color Configuration Tool](https://thomashunter.name/i3-configurator/)
 - [Hex Color Picker](https://colors-picker.com/hex-color-picker/)
 
+GTK Theme Config
+===
+Most applications refer to gtk2.0 or gtk3.0 to theme themselves according to your system. Configuring your gtk theme is akin to setting the overall system theme. To do this, we will use lxappearance. It can be installed via Debian package with:
+```
+sudo apt install lxappearance
+```
+Note: I attempted to install 'kde-config-gtk-style' since lxappearence seems to be not actively developed anymore. However I was too dumb to figure out how to launch the config dialog and reverted to lxappearance.
 
-
+From there, common themes can be installed via Debian package. The classic Arc theme can be installed with:
+```
+sudo apt install arc-theme
+```
+Afterwards, the themes hould be selectable in your config dialog of choice.
