@@ -193,8 +193,8 @@ i3wm Window Color Config
 ===
 All window and bar color selection is done through the main i3wm config file. There is an example of these file in the repository with many colors pre-defined. Simply modify those values to make further changes however you like. A few useful resources for planning changes may be:
 
-[Online i3 Color Configuration Tool](https://thomashunter.name/i3-configurator/)
-[Hex Color Picker](https://colors-picker.com/hex-color-picker/)
+- [Online i3 Color Configuration Tool](https://thomashunter.name/i3-configurator/)
+- [Hex Color Picker](https://colors-picker.com/hex-color-picker/)
 
 
 
