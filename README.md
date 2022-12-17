@@ -209,3 +209,15 @@ From there, common themes can be installed via Debian package. The classic Arc t
 sudo apt install arc-theme
 ```
 Afterwards, the themes hould be selectable in your config dialog of choice.
+
+i3wm Bar Layout Config
+===
+Install i3blocks with:
+```
+sudo apt install i3blocks
+```
+Move the default conf file, created when i3blocks was installed, to the i3 config directory:
+```
+sudo cp /etc/i3blocks.conf ~/.config/i3
+```
+There is a copy of the i3blocks.conf file in this repository, in the expected relative location. The i3wm config file will need a line to make sure the i3blocks command runs instead of the default, which should also already be added.
