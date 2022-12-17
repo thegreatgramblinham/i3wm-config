@@ -176,11 +176,16 @@ Any .ttf file can be placed into the home directory under:
 ```
 From there, it should be available as an installed font.
 
-Desktop Background Config
+Desktop Wallpaper Config
 ===
-An addtional program is needed to manage our background image. Here we'll be using feh.
+An addtional program is needed to manage our wallpaper image. Here we'll be using feh.
 ```
 sudo apt install feh
+```
+
+An example call to set a background image using the "scale" layout would be:
+```
+sudo feh --bg-scale <Path to file>
 ```
 This call can be inserted into i3wm just like any other to ensure it starts with each boot.
 
