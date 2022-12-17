@@ -62,8 +62,7 @@ set $dmActBgClr "#42382D"
 set $dmActTxtClr "#FFFBF7"
 ##Important: Variables are not used here because they don't seem to translate as expected
 ##           and create errors. I've left them in above for clarity on what each one does.
-bindsym $mod+d exec "dmenu_run -nf '#2b2a25' -nb '#F7D0FD' -sb '#42382D' -sf '#FFFBF7' -fn 'JetBrainsMonoNL-Bold-16' -p 'Run >>'"
-
+bindsym $mod+d exec dmenu_run -fn 'JetBrainsMonoNL-Bold-20' -nf '#2b2a25' -nb '#F7D0FD' -sb '#42382D' -sf '#FFFBF7' -l 10 -p '[ Run ] >>'
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
