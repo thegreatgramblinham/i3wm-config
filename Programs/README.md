@@ -96,3 +96,11 @@ Slic3r
 ```
 sudo apt install slic3r
 ```
+
+Other
+===
+Arduino IDE
+===
+[Arduino IDE](https://www.arduino.cc/en/software) should be available from the main website in a .tar.gz file. Releases can also be found on [the GitHub page.](https://github.com/arduino/arduino-ide)
+
+Note: At the time of writing, v2.0 of the IDE has been released but does not have Linux ARM 32/64 pacages anymore? Unclear if that will be added later. For now, use the last legacy release.
