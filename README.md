@@ -185,9 +185,14 @@ sudo apt install feh
 
 An example call to set a background image using the "scale" layout would be:
 ```
-sudo feh --bg-scale <Path to file>
+feh --bg-scale <Path to file>
 ```
 This call can be inserted into i3wm just like any other to ensure it starts with each boot.
+
+If only a solid color is disired, that can be done with the command:
+```
+xsetroot -solid "$desktopBgClr"
+```
 
 i3wm Window Color Config
 ===

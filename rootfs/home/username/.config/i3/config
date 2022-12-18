@@ -203,12 +203,12 @@ set $hldrBgClr "#0C0C0C"
 set $hldrBorClr "#000000"
 set $hldrTxtClr "#FFFBF7"
 
-# class                 border       bground     text         indicator    child_border
-client.focused          $focBorClr   $focBgClr   $focTxtClr   $focBorClr   $focBorClr
-client.focused_inactive $unfocBorClr $unfocBgClr $unfocTxtClr $unfocBorClr $unfocBorClr
-client.unfocused        $unfocBorClr $unfocBgClr $unfocTxtClr $unfocBorClr $unfocBorClr
-client.urgent           $alrtBorClr  $alrtBgClr  $alrtTxtClr  $alrtBorClr  $alrtBgClr
-client.placeholder      $hldrBorClr  $hldrBgClr  $hldrTxtClr  $hldrBorClr  $hldrBorClr
+# class                 border       bground       text         indicator    child_border
+client.focused          $focBorClr   $focBgClr    $focTxtClr   $focBorClr   $focBorClr
+client.focused_inactive $unfocBorClr $unfocBgClr  $unfocTxtClr $unfocBorClr $unfocBorClr
+client.unfocused        $unfocBorClr $unfocBgClr  $unfocTxtClr $unfocBorClr $unfocBorClr
+client.urgent           $alrtBorClr  $alrtBgClr   $alrtTxtClr  $alrtBorClr  $alrtBgClr
+client.placeholder      $hldrBorClr  $hldrBgClr   $hldrTxtClr  $hldrBorClr  $hldrBorClr
 
 client.background                    $hldrBgClr
 
@@ -256,8 +256,10 @@ bar
 ##ADDED# Display Initialization
 exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 
-##ADDED# Wallpaper Initialization
-exec_always feh --bg-scale Pictures/deepSpace.webp
+##ADDED# Desktop Background Initialization
+#exec_always feh --bg-scale Pictures/deepSpace.webp
+set $desktopBgClr "#332D2A"
+exec_always xsetroot -solid "$desktopBgClr"
 
 ##ADDED# Window Borders
 hide_edge_borders none
