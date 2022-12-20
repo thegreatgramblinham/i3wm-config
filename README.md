@@ -213,7 +213,7 @@ From there, common themes can be installed via Debian package. The classic Arc t
 ```
 sudo apt install arc-theme
 ```
-Afterwards, the themes hould be selectable in your config dialog of choice.
+Afterwards, the themes should be selectable in your config dialog of choice.
 
 i3wm Bar Layout Config
 ===

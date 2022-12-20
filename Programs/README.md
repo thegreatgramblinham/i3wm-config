@@ -53,6 +53,10 @@ Midnight Commander
 sudo apt install mc
 ```
 
+Tip: While configuring mc, 'Options > Panel Options > Lynx-like motion' allows you to move up and down directory levels with the arrow keys. Super useful.
+
+When you're happy with all configurations made to the program, use 'Options > Save setup' to commit your settings for next boot.
+
 GParted
 ===
 [GParted](https://gparted.org/) can be installed via Debian package:
