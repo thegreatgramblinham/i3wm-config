@@ -48,11 +48,17 @@ IMPORTANT: Your target drive/device ('of') needs to be unmounted before proceedi
 
 An example of a drive to drive copy:
 ```
-sudo dd bs=4M if=/dev/mmcblk0 of=/dev/sda conv=fsync
+sudo dd bs=4M if=/dev/mmcblk0 of=/dev/sda conv=fsync status=progress
 ```
 In this example 'mmcblk0' is the root node of our working file system and that is being copied to the *unmounted* storage device located at the 'sda' root node.
 
+Tip: The 'bs' flag stands for "block size" and a reasonable place to start if you desire to specify your own block size (the default is 512) is by running the 'stat' command on the directory you are copying. For example, in the line above:
+```
+stat /dev/mmcblk0
+```
+The return will be in the "IO Block:" field. This may not be the actual fastest value for bs, but it should serve as a decent starting point.
+
 An image file can be created by specifing the 'of' varible to a location on the filesystem and appending '.img' as in this example:
 ```
-sudo dd if=/dev/sda of=~/image-of-drive.img
+sudo dd if=/dev/sda of=~/image-of-drive.img status=progress
 ```
