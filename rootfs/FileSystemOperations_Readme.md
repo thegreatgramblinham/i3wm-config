@@ -62,3 +62,84 @@ An image file can be created by specifing the 'of' varible to a location on the 
 ```
 sudo dd if=/dev/sda of=~/image-of-drive.img status=progress
 ```
+
+Creating a shared network folder
+===
+We will be using Samba which will allow Windows and Linux compatibility for network shares.
+```
+sudo apt install samba
+```
+You can check to make sure it was successfully installed with:
+```
+smbd --version
+```
+
+After installation is complete, start the Samba service with:
+```
+sudo systemctl enable --now smbd
+```
+
+From here, we need to edit a configuration file to tell our Samba service what we want to share. Launch your favorite text editor pointed to:
+```
+sudo nano /etc/samba.smb.conf
+```
+This is where we will define our new fully public share configuration. It should look something like this:
+```
+# Header that designates a new share section
+[sample-home-dir-share]
+comment = This is a sample network share
+# Path to the shared directory
+path = /home/<user name>
+public = yes
+browsable = yes
+writable = yes
+read only = no
+force create mode = 0666
+force directory mode = 0777
+```
+TBD: I'll get back to you on what the hell those mode assignments mean, but the rest is pretty self-explainatory.
+
+Once the configuration has been saved, restart the Samba service with:
+```
+sudo systemctl restart smbd
+```
+
+As the final step, we need to designate a user for this share to be used with.
+
+*NOTE: This user also has to be the owner of the share directory.
+If you are unsure of a file or directory's owner, navigate just outside the target in the terminal and use:
+```
+ls -l
+```
+The third column is the file owner.
+
+In the case of a home directory, this has to be the user who the home directory belongs to. So in our example we need to:
+```
+# Add the user, then password when prompted
+sudo smbpasswd -a <user name>
+# Enable the user
+sudo smbpasswd -e <user name>
+```
+
+This is enough to get a basic share up and running (after another restart of the samba service), but it's not exactly secure. Depending on if the network share requires more robust security we may want to create a separate user to handle a public share.
+
+If we want to create a new user of the share, we instead need to do:
+```
+sudo adduser sambaguest
+```
+'sambaguest' is the new user name here. The name is abitrary.
+
+Then provide a password that is as secure as you want it to be. Could be a robust password, or just the username duplicated. (Other new user params can just be taken as default).
+
+Using the same commands as above, the new user will have to be added to samba and enabled.
+
+As the last step, the network share owner will have to be changed to our new user. Warning: This can be a dangerous operation if peformed on the wrong location. Ensure your share is in a user agnostic directory and safe to have its permissions replaced.
+To change ownership we use:
+```
+sudo chown --recursive <directory to>/<network share>
+```
+
+Restart the Samba service again and you should be good to go!
+```
+sudo systemctl restart smbd
+```
