@@ -37,12 +37,25 @@ GNOME Terminal
 ```
 sudo apt install gnome-terminal
 ```
-In order to configure the default terminal in your Debian distribuition, run:
+In order to configure the default terminal in your Debian distribution, run:
 ```
 sudo update-alternatives --config x-terminal-emulator
 ```
 and select your desired terminal from the list.
 
+Vim
+===
+[Vim](https://www.vim.org/) can be installed via Debian package:
+```
+sudo apt install vim
+```
+In order to configure the default editor in your Debian distribution, run:
+```
+sudo update-alternatives --config editor
+```
+and select your desired editor from the list.
+
+For more information on how to configure Vim, check out [this repo.](https://github.com/thegreatgramblinham/vim-config)
 
 OS Tools
 ===
