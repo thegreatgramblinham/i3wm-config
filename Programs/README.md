@@ -47,8 +47,10 @@ Vim
 ===
 [Vim](https://www.vim.org/) can be installed via Debian package:
 ```
-sudo apt install vim
+sudo apt install vim-gtk
 ```
+(the gtk variant is complied with extra features like system clipboard integration)
+
 In order to configure the default editor in your Debian distribution, run:
 ```
 sudo update-alternatives --config editor
