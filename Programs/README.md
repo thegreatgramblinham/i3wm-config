@@ -13,7 +13,6 @@ Git
 ```
 sudo apt install git
 ```
-//TODO details to come on configuring SSH connectivity
 
 Firefox
 ===
