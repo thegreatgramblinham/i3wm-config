@@ -62,7 +62,7 @@ set $dmActBgClr "#42382D"
 set $dmActTxtClr "#FFFBF7"
 ##Important: Variables are not used here because they don't seem to translate as expected
 ##           and create errors. I've left them in above for clarity on what each one does.
-bindsym $mod+d exec dmenu_run -fn 'JetBrainsMonoNL-Bold-20' -nf '#2b2a25' -nb '#F7D0FD' -sb '#42382D' -sf '#FFFBF7' -l 10 -p '[ Run ] >>'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'JetBrainsMonoNL-Bold-20' -nf '#2b2a25' -nb '#F7D0FD' -sb '#42382D' -sf '#FFFBF7' -l 10 -p '[ Run ] >>'
 
 # change focus
 bindsym $mod+j focus left
@@ -254,12 +254,12 @@ bar
 
 
 ##ADDED# Display Initialization
-exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
+exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 
 ##ADDED# Desktop Background Initialization
-#exec_always feh --bg-scale Pictures/deepSpace.webp
+#exec_always --no-startup-id feh --bg-scale Pictures/deepSpace.webp
 set $desktopBgClr "#332D2A"
-exec_always xsetroot -solid "$desktopBgClr"
+exec_always --no-startup-id xsetroot -solid "$desktopBgClr"
 
 ##ADDED# Window Borders
 hide_edge_borders none
