@@ -85,6 +85,14 @@ Raspberry Pi Imager
 sudo apt install rpi-imager
 ```
 
+Pulse Audio Control
+===
+[Pulse Audio Control]() is a gui tool to control the pulse audio service. It can be installed via Debian
+package:
+```
+sudo apt install pavucontrol
+```
+
 Htop
 ===
 [Htop](https://htop.dev/) can be installed via Debian package:
