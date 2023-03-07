@@ -100,6 +100,13 @@ Htop
 sudo apt install htop
 ```
 
+TCPDump
+===
+[TCPDump](https://www.tcpdump.org/) can be installed via Debian package:
+```
+sudo apt install TCPDump
+```
+
 Neofetch
 ===
 [Neofetch](https://github.com/dylanaraps/neofetch) can be installed via Debian package:
