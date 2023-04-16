@@ -187,12 +187,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ##ADDED# Window Color Theme
-set $focBgClr "#946287"
-set $focBorClr "#B865AA"
+set $focBgClr "#76576F"
+set $focBorClr "#997391"
 set $focTxtClr "#FFFBF7"
 
-set $unfocBgClr "#332D2A"
-set $unfocBorClr "#332D2A"
+set $unfocBgClr "#272523"
+set $unfocBorClr "#272523"
 set $unfocTxtClr "#888888"
 
 set $alrtBgClr "#E20871"
@@ -213,19 +213,19 @@ client.placeholder      $hldrBorClr  $hldrBgClr   $hldrTxtClr  $hldrBorClr  $hld
 client.background                    $hldrBgClr
 
 ##ADDED# Bar Color Theme
-set $focWsBgClr "#946287"
-set $focWsBorClr "#B865AA"
+set $focWsBgClr "#76576F"
+set $focWsBorClr "#997391"
 set $focWsTxtClr "#FFFBF7"
 
-set $actWsBgClr "#332D2A"
+set $actWsBgClr "#272523"
 set $actWsBorClr "#887870"
 set $actWsTxtClr "#FFFBF7"
 
-set $inactWsBgClr "#332D2A"
-set $inactWsBorClr "#332D2A"
+set $inactWsBgClr "#272523"
+set $inactWsBorClr "#272523"
 set $inactWsTxtClr "#888888"
 
-set $barBgClr "#332D2A"
+set $barBgClr "#272523"
 set $barTxtClr "#FFFBF7"
 set $barSepClr "#747474"
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -258,7 +258,7 @@ exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --m
 
 ##ADDED# Desktop Background Initialization
 #exec_always --no-startup-id feh --bg-scale Pictures/deepSpace.webp
-set $desktopBgClr "#332D2A"
+set $desktopBgClr "#272523"
 exec_always xsetroot -solid "$desktopBgClr"
 
 ##ADDED# Window Borders
