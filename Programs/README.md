@@ -56,7 +56,7 @@ sudo update-alternatives --config editor
 ```
 and select your desired editor from the list.
 
-For more information on how to configure Vim, check out [this repo.](https://github.com/thegreatgramblinham/vim-config)
+For more information on how to configure Vim, including building from source, check out [this repo.](https://github.com/thegreatgramblinham/vim-config)
 
 OS Tools
 ===
@@ -70,6 +70,15 @@ sudo apt install mc
 Tip: While configuring mc, 'Options > Panel Options > Lynx-like motion' allows you to move up and down directory levels with the arrow keys. Super useful.
 
 When you're happy with all configurations made to the program, use 'Options > Save setup' to commit your settings for next boot.
+
+Ranger
+===
+(This has largely replaced Midnight Commander for me)
+[Ranger](https://github.com/ranger/ranger) can be installed via Debian package:
+```
+sudo apt install ranger
+```
+Check out [the repo](https://github.com/thegreatgramblinham/ranger-config) for specific instructions and config.
 
 GParted
 ===
@@ -130,10 +139,28 @@ Slic3r
 sudo apt install slic3r
 ```
 
+PrusaSlicer
+===
+Built on top of Slic3r and is much more stable. Has to be built from source from the [git repo](https://github.com/prusa3d/PrusaSlicer) where there are [build instructions for Linux](https://github.com/prusa3d/PrusaSlicer/blob/master/doc/How%20to%20build%20-%20Linux%20et%20al.md)
+
 Other
 ===
 Arduino IDE
 ===
 [Arduino IDE](https://www.arduino.cc/en/software) should be available from the main website in a .tar.gz file. Releases can also be found on [the GitHub page.](https://github.com/arduino/arduino-ide)
 
-Note: At the time of writing, v2.0 of the IDE has been released but does not have Linux ARM 32/64 pacages anymore? Unclear if that will be added later. For now, use the last legacy release.
+There is technically not an official arm binary yet, but there are v2 app images complied [here.](https://github.com/koendv/arduino-ide-raspberrypi)
+
+Gmsh
+===
+[Gmsh](https://gmsh.info/) can be installed via Debian package:
+```
+sudo apt install gmsh
+```
+
+Flameshot
+===
+[Flameshot](https://flameshot.org/) can be installed via Debian package:
+```
+sudo apt install flameshot
+```
