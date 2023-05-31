@@ -102,6 +102,14 @@ package:
 sudo apt install pavucontrol
 ```
 
+Feh
+===
+[feh]() is a cli image viewer that is also compatable with Ranger. It can be installed via Debian
+package:
+```
+sudo apt install feh
+```
+
 Htop
 ===
 [Htop](https://htop.dev/) can be installed via Debian package:
