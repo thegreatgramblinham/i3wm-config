@@ -22,14 +22,6 @@ sudo apt install firefox-esr
 ```
 Note: The "esr" variant is the "LTS" version. It literally stands for "extended support release".
 
-VSCode
-===
-[VSCode](https://code.visualstudio.com/) can be installed via Debian package:
-```
-sudo apt install code
-```
-From there, [check out this repository](https://github.com/thegreatgramblinham/vscode-config) for more detailed information on how to set up VSCode.
-
 GNOME Terminal
 ===
 [Gnome Terminal](https://help.gnome.org/users/gnome-terminal/stable/) can be installed via Debian package:
@@ -131,6 +123,14 @@ Neofetch
 sudo apt install neofetch
 ```
 
+Ripgrep
+===
+[ripgrep](https://github.com/BurntSushi/ripgrep) can be installed via Debian package:
+```
+sudo apt install ripgrep
+```
+Grep features with ease of use improvements.
+
 3D Printing Applications
 ===
 OpenSCAD
@@ -172,3 +172,8 @@ Flameshot
 ```
 sudo apt install flameshot
 ```
+
+Armcord
+===
+[Armcord](https://github.com/ArmCord/ArmCord) can be installed via package source.
+Details are included on their GitHub page.
