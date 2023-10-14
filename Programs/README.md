@@ -151,6 +151,18 @@ PrusaSlicer
 ===
 Built on top of Slic3r and is much more stable. Has to be built from source from the [git repo](https://github.com/prusa3d/PrusaSlicer) where there are [build instructions for Linux](https://github.com/prusa3d/PrusaSlicer/blob/master/doc/How%20to%20build%20-%20Linux%20et%20al.md)
 
+KiCad
+===
+The easiest way to get the most recent binaries is to use flatpak:
+```
+sudo flatpak install --from https://flathub.org/repo/appstream/org.kicad.KiCad.flatpakref
+```
+then after, it can be run with:
+```
+flatpak run org.kicad.KiCad
+```
+
+
 Other
 ===
 Arduino IDE
