@@ -168,6 +168,11 @@ This call can be inserted into i3wm just like any other. i3wm only seems to like
 exec xrandr --output HDMI-1 --mode 1920x1080 --output HDMI-2 --mode 1920x1080 --output HDMI-2 --right-of HDMI-1
 ```
 
+In order to change the DPI scaling of your xserver instance include the following option in the .Xresources file in your home directory:
+```
+Xft.dpi: 120
+```
+
 Font Config
 ===
 Any .ttf file can be placed into the home directory under:
