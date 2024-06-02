@@ -22,11 +22,11 @@ sudo apt install firefox-esr
 ```
 Note: The "esr" variant is the "LTS" version. It literally stands for "extended support release".
 
-GNOME Terminal
+Terminator
 ===
-[Gnome Terminal](https://help.gnome.org/users/gnome-terminal/stable/) can be installed via Debian package:
+[Terminator](https://gnome-terminator.org) can be installed via Debian package:
 ```
-sudo apt install gnome-terminal
+sudo apt install terminator
 ```
 In order to configure the default terminal in your Debian distribution, run:
 ```
@@ -34,13 +34,14 @@ sudo update-alternatives --config x-terminal-emulator
 ```
 and select your desired terminal from the list.
 
+Check out [the repo](https://github.com/thegreatgramblinham/terminator-config) for specific instructions and config.
+
 Vim
 ===
 [Vim](https://www.vim.org/) can be installed via Debian package:
 ```
-sudo apt install vim-gtk
+sudo apt install vim
 ```
-(the gtk variant is complied with extra features like system clipboard integration)
 
 In order to configure the default editor in your Debian distribution, run:
 ```
@@ -49,23 +50,13 @@ sudo update-alternatives --config editor
 and select your desired editor from the list.
 
 For more information on how to configure Vim, including building from source, check out [this repo.](https://github.com/thegreatgramblinham/vim-config)
+(This will be require for both the latest features and to integrate with the system clipboard)
 
 OS Tools
 ===
-Midnight Commander
-===
-[Midnight Commander](https://midnight-commander.org/) can be installed via Debian package:
-```
-sudo apt install mc
-```
-
-Tip: While configuring mc, 'Options > Panel Options > Lynx-like motion' allows you to move up and down directory levels with the arrow keys. Super useful.
-
-When you're happy with all configurations made to the program, use 'Options > Save setup' to commit your settings for next boot.
 
 Ranger
 ===
-(This has largely replaced Midnight Commander for me)
 [Ranger](https://github.com/ranger/ranger) can be installed via Debian package:
 ```
 sudo apt install ranger
@@ -135,16 +126,9 @@ Grep features with ease of use improvements.
 ===
 OpenSCAD
 ===
-[OpenSCAD](https://openscad.org/) can be installed via Debian package:
+[openscad](https://openscad.org/) can be installed via debian package:
 ```
 sudo apt install openscad
-```
-
-Slic3r
-===
-[Slic3r](https://slic3r.org/) can be installed via Debian package:
-```
-sudo apt install slic3r
 ```
 
 PrusaSlicer
@@ -162,6 +146,12 @@ then after, it can be run with:
 flatpak run org.kicad.KiCad
 ```
 
+InkScape
+===
+[InkScape](https://inkscape.org/) can be installed via debian package:
+```
+sudo apt install inkscape
+```
 
 Other
 ===
