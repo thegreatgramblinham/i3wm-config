@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMonoNL-Regular 11
+font pango:JetBrainsMonoNL-Regular 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -25,7 +25,7 @@ font pango:JetBrainsMonoNL-Regular 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -40,6 +40,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -65,10 +69,10 @@ set $dmActTxtClr "#FFFBF7"
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'JetBrainsMonoNL-Bold-20' -nf '#2b2a25' -nb '#F7D0FD' -sb '#42382D' -sf '#FFFBF7' -l 10 -p '[ Run ] >>'
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -77,10 +81,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -89,7 +93,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -257,9 +261,13 @@ bar
 exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1280 --output HDMI-2 --mode 1920x1280 --output HDMI-2 --below HDMI-1
 
 ##ADDED# Desktop Background Initialization
-#exec_always --no-startup-id feh --bg-scale Pictures/deepSpace.webp
+exec_always --no-startup-id feh --bg-scale Pictures/pink-geometeric-background.jpg
 set $desktopBgClr "#272523"
 exec_always xsetroot -solid "$desktopBgClr"
 
 ##ADDED# Window Borders
 hide_edge_borders none
+
+##ADDED# Gap styling
+gaps inner 15
+gaps outer 5
