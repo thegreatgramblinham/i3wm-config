@@ -46,7 +46,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -263,7 +263,7 @@ exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1280 --output HDMI-2 --m
 ##ADDED# Desktop Background Initialization
 exec_always --no-startup-id feh --bg-scale Pictures/pink-geometeric-background.jpg
 set $desktopBgClr "#272523"
-exec_always xsetroot -solid "$desktopBgClr"
+exec_always --no-startup-id xsetroot -solid "$desktopBgClr"
 
 ##ADDED# Window Borders
 hide_edge_borders none
