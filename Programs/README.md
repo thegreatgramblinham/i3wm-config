@@ -107,13 +107,6 @@ TCPDump
 sudo apt install TCPDump
 ```
 
-Neofetch
-===
-[Neofetch](https://github.com/dylanaraps/neofetch) can be installed via Debian package:
-```
-sudo apt install neofetch
-```
-
 Ripgrep
 ===
 [ripgrep](https://github.com/BurntSushi/ripgrep) can be installed via Debian package:
@@ -175,7 +168,9 @@ Flameshot
 sudo apt install flameshot
 ```
 
-Armcord
+Signal Desktop
 ===
-[Armcord](https://github.com/ArmCord/ArmCord) can be installed via package source.
+[Signal Desktop](https://github.com/adamthiede/signal-desktop-builder) can be installed via package source + flatpak.
 Details are included on their GitHub page.
+
+
