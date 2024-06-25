@@ -173,4 +173,6 @@ Signal Desktop
 [Signal Desktop](https://github.com/adamthiede/signal-desktop-builder) can be installed via package source + flatpak.
 Details are included on their GitHub page.
 
-
+Armcord
+===
+[Armcord](https://github.com/ArmCord/ArmCord) can be installed via package source.
